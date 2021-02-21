@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/playerSpriteIdle.png-bdc9bb42313dc2b0640333e2fa1f5d82.stex"
+path="res://.import/esteira.png-233d5e2b2ec0d6ccbbbe1759adb99e08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/playerSpriteIdle.png"
-dest_files=[ "res://.import/playerSpriteIdle.png-bdc9bb42313dc2b0640333e2fa1f5d82.stex" ]
+source_file="res://assets/sprites/esteira.png"
+dest_files=[ "res://.import/esteira.png-233d5e2b2ec0d6ccbbbe1759adb99e08.stex" ]
 
 [params]
 
