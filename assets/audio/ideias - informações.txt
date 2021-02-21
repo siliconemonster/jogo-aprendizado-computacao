@@ -2,6 +2,7 @@ ideias:
 música de fundo
 som de erro
 som de acerto
+som de esteira
 
 
 Samplers usados:
