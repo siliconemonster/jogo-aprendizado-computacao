@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mov_turn_empty.png-b5f0a532f1f70c67f3097e36050c2aa9.stex"
+path="res://.import/mov_turn_empty.png-98779334646440faa49ce5fa28978f0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mov_turn_empty.png"
-dest_files=[ "res://.import/mov_turn_empty.png-b5f0a532f1f70c67f3097e36050c2aa9.stex" ]
+source_file="res://assets/Sprites/mov_turn_empty.png"
+dest_files=[ "res://.import/mov_turn_empty.png-98779334646440faa49ce5fa28978f0d.stex" ]
 
 [params]
 
