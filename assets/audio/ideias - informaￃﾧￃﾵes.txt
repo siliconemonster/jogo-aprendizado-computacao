@@ -1,9 +1,0 @@
-ideias:
-música de fundo
-som de erro
-som de acerto
-
-
-Samplers usados:
-para sons de sucesso 1, 2, 3 e 4, utilizei o Xpand!2 = 018 Bells - Wavetable Bells 1+
-para sons de erro 1,  utilizei o Xpand!2 = 008 Hard Leads - Dangerous
