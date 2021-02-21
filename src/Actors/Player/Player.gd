@@ -1,14 +1,15 @@
 extends KinematicBody2D
 
 export var moveSpeed: = 600.0
+var _objectCurrentlyHeld = null
 
 var velocity: = Vector2.ZERO
 
 var _facingDirection = -1 # 1: facing right // -1: facing left
 var _isFullyMoving = false # used in animation only
 
-var _objectCurrentlyHeld = null
 var _interactableBodiesInRange = []
+
 
 # Adds and removes interactable objects from _interactableBodiesInRange array as they enter/exit the InteractableArea
 func _on_InteractableArea_body_entered(body: Node) -> void:
@@ -47,9 +48,9 @@ func movement():
 	
 	
 func packageManipulation():
-	if _objectCurrentlyHeld == null and Input.is_action_just_pressed("interact"):
+	if _objectCurrentlyHeld == null and Input.is_action_just_pressed("ui_select"):
 		grabPackage()
-	elif _objectCurrentlyHeld != null and Input.is_action_just_pressed("interact"):
+	elif _objectCurrentlyHeld != null and Input.is_action_just_pressed("ui_select"):
 		dropPackage()
 	
 	# Keeps object in front of Player while being held:
