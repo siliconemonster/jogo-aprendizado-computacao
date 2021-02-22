@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ponta_esteira_verde_2.png-d018e09cde25cb6d5eeb4a86510f5eff.stex"
+path="res://.import/inicio_esteira_verde_2.png-18affb05cd42bb061ef4b800c0931ecd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/esteira/esteira_verde/ponta_esteira_verde_2.png"
-dest_files=[ "res://.import/ponta_esteira_verde_2.png-d018e09cde25cb6d5eeb4a86510f5eff.stex" ]
+source_file="res://assets/Sprites/esteira/esteira_verde/inicio_esteira_verde_2.png"
+dest_files=[ "res://.import/inicio_esteira_verde_2.png-18affb05cd42bb061ef4b800c0931ecd.stex" ]
 
 [params]
 
