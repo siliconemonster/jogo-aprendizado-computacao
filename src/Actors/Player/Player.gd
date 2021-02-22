@@ -48,9 +48,9 @@ func movement():
 	
 	
 func packageManipulation():
-	if _objectCurrentlyHeld == null and Input.is_action_just_pressed("ui_select"):
+	if _objectCurrentlyHeld == null and Input.is_action_just_pressed("interact"):
 		grabPackage()
-	elif _objectCurrentlyHeld != null and Input.is_action_just_pressed("ui_select"):
+	elif _objectCurrentlyHeld != null and Input.is_action_just_pressed("interact"):
 		dropPackage()
 	
 	# Keeps object in front of Player while being held:
