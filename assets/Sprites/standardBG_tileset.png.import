@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/esteira.png-41655630d351a5987ac0106289f1df94.stex"
+path="res://.import/standardBG_tileset.png-fbad08a6cebb1f84b9c5a6824ea2f86e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/esteira.png"
-dest_files=[ "res://.import/esteira.png-41655630d351a5987ac0106289f1df94.stex" ]
+source_file="res://assets/Sprites/standardBG_tileset.png"
+dest_files=[ "res://.import/standardBG_tileset.png-fbad08a6cebb1f84b9c5a6824ea2f86e.stex" ]
 
 [params]
 

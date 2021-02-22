@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/esteira.png-41655630d351a5987ac0106289f1df94.stex"
+path="res://.import/esteira_verde_2.png-5bbba2eb358ba9cbd28025596f3eb25c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/esteira.png"
-dest_files=[ "res://.import/esteira.png-41655630d351a5987ac0106289f1df94.stex" ]
+source_file="res://assets/Sprites/esteira/esteira_verde/esteira_verde_2.png"
+dest_files=[ "res://.import/esteira_verde_2.png-5bbba2eb358ba9cbd28025596f3eb25c.stex" ]
 
 [params]
 

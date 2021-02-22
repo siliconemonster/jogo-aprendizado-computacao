@@ -3,11 +3,11 @@
 [ext_resource path="res://assets/sprites/package.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 36.0551, 23.335 )
+extents = Vector2( 36.0551, 22.2134 )
 
 [node name="Package" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 11
+collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -25 )
