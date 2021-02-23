@@ -1,9 +1,17 @@
 ideias:
-música de fundo
+música de fundo durante o jogo
+música de fundo no menu/créditos
 som de erro
 som de acerto
 som de esteira
 
+---ver se consigo
+caixa pegando fogo
+som de mensagem
+som de mudar de opção
+som de perda
+
+-------------------------------------------------------------------------------------
 
 Samplers usados:
 para sons de sucesso 1, 2, 3 e 4, utilizei o Xpand!2 = 018 Bells - Wavetable Bells 1+
