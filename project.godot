@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="AprendizadoComp"
+run/main_scene="res://src/Scenes/Levels/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [input]
@@ -54,14 +55,14 @@ interact={
 [layer_names]
 
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Packages"
-2d_physics/layer_3="ConveyorBelts"
+2d_physics/layer_2="Interactables"
+2d_physics/layer_3="Tables"
 2d_physics/layer_4="World"
-2d_physics/layer_5="PackageSlots"
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.14902, 0.192157, 0.219608, 1 )
 environment/default_environment="res://default_env.tres"
