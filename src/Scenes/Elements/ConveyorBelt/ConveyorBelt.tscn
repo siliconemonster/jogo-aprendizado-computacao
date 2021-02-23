@@ -1,24 +1,23 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://src/Resources/AnimatedTextures/green_conveyor_belt_animatedtexture.tres" type="Texture" id=1]
-[ext_resource path="res://src/Resources/AnimatedTextures/end_green_conveyor_belt_animatedtexture.tres" type="Texture" id=2]
-[ext_resource path="res://src/Scenes/Actors/Elements/ConveyorBelt.gd" type="Script" id=3]
-[ext_resource path="res://src/Resources/AnimatedTextures/blue_conveyor_belt_animatedtexture.tres" type="Texture" id=4]
-[ext_resource path="res://src/Resources/AnimatedTextures/start_blue_conveyor_belt_animatedtexture.tres" type="Texture" id=5]
-[ext_resource path="res://src/Resources/AnimatedTextures/start_green_conveyor_belt_animatedtexture.tres" type="Texture" id=6]
-[ext_resource path="res://src/Resources/AnimatedTextures/end_blue_conveyor_belt_animatedtexture.tres" type="Texture" id=7]
+[ext_resource path="res://assets/Resources/AnimatedTextures/green_conveyor_belt_animatedtexture.tres" type="Texture" id=1]
+[ext_resource path="res://assets/Resources/AnimatedTextures/end_green_conveyor_belt_animatedtexture.tres" type="Texture" id=2]
+[ext_resource path="res://src/Scenes/Elements/ConveyorBelt/ConveyorBelt.gd" type="Script" id=3]
+[ext_resource path="res://assets/Resources/AnimatedTextures/blue_conveyor_belt_animatedtexture.tres" type="Texture" id=4]
+[ext_resource path="res://assets/Resources/AnimatedTextures/start_blue_conveyor_belt_animatedtexture.tres" type="Texture" id=5]
+[ext_resource path="res://assets/Resources/AnimatedTextures/start_green_conveyor_belt_animatedtexture.tres" type="Texture" id=6]
+[ext_resource path="res://assets/Resources/AnimatedTextures/end_blue_conveyor_belt_animatedtexture.tres" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 40 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 40, 5.07952 )
+
 [node name="ConveyorBelt" type="StaticBody2D"]
-collision_layer = 4
+collision_layer = 8
 collision_mask = 0
 script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 40, 40 )
-shape = SubResource( 1 )
 
 [node name="StartBlueConveyorBeltAnimatedTexture" type="TextureRect" parent="."]
 visible = false
@@ -78,3 +77,17 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 40, 40 )
+shape = SubResource( 1 )
+
+[node name="Track" type="Area2D" parent="."]
+monitoring = false
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Track"]
+modulate = Color( 0.203922, 0.866667, 0.0627451, 1 )
+position = Vector2( 40, 35 )
+shape = SubResource( 2 )

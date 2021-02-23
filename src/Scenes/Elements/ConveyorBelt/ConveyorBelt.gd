@@ -7,18 +7,21 @@ enum Colors {Green, Blue}
 export(Tile) var conveyor_tile
 export(Colors) var conveyor_color
 
+var conveyor_belt_direction
+var conveyor_belt_speed = 125.0
 
 func _ready() -> void:
 	if not Engine.editor_hint:
-		updatesSprites()
+		conveyor_belt_direction = Vector2(scale.x * -1, 0)
+		updatesVisibleAnimatedTexture()
+		unloadInvisibleAnimatedTextures()
 
 
 func _process(delta: float) -> void:
 	if Engine.editor_hint:
-		updatesSprites()
-		return
+		updatesVisibleAnimatedTexture()
 
-func updatesSprites():
+func updatesVisibleAnimatedTexture():
 	$StartGreenConveyorBeltAnimatedTexture.visible = false
 	$GreenConveyorBeltAnimatedTexture.visible = false
 	$EndGreenConveyorBeltAnimatedTexture.visible = false
@@ -42,3 +45,13 @@ func updatesSprites():
 		elif conveyor_tile == Tile.End:
 			$EndBlueConveyorBeltAnimatedTexture.visible = true
 	return
+
+func unloadInvisibleAnimatedTextures():
+	for n in get_children():
+		if n.visible == false:
+			n.queue_free()
+
+
+
+
+
