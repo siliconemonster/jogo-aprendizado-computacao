@@ -4,7 +4,7 @@ const PackageSlotResource = preload("res://src/Scenes/Elements/PackageSlot/Packa
 const PackageResource = preload("res://src/Scenes/Elements/Package/Package.tscn")
 
 export var seconds_between_spawns := 0.8
-export var spawn_packages := true
+export var spawns_packages := true
 
 var _seconds_since_last_spawn = 0.0
 
@@ -23,7 +23,7 @@ func spawn_package_slot():
 	package_slot_instance.movement_speed = 350.0
 	package_slot_instance.movement_direction = Vector2.DOWN
 
-	if spawn_packages:
+	if spawns_packages:
 		var package_instance = PackageResource.instance()
 		package_slot_instance.package_held = package_instance
 		package_slot_instance.add_child(package_instance)

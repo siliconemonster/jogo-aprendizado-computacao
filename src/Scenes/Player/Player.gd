@@ -111,13 +111,13 @@ func flipNodesBasedOnFacingDirection():
 	# Facing Right:
 	if _facing_direction == 1:
 		$PlayerSprite.set_flip_h(true)
-		$InteractableArea.position = Vector2(10, 34)
+		$InteractableArea.scale.x = -1
 		if _package_currently_held != null:
 			_package_currently_held.find_node("Sprite").set_flip_h(true)
 	# Facing Left:
 	elif _facing_direction == -1:
 			$PlayerSprite.set_flip_h(false)
-			$InteractableArea.position = Vector2(-10, 34)
+			$InteractableArea.scale.x = 1
 			if _package_currently_held != null:
 				_package_currently_held.find_node("Sprite").set_flip_h(false)
 	return
