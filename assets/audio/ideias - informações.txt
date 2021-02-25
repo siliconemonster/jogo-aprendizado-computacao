@@ -16,7 +16,7 @@ som de perda
 Samplers usados:
 para sons de sucesso 1, 2, 3 e 4, utilizei o Xpand!2 = 018 Bells - Wavetable Bells 1+
 para sons de erro 1,  utilizei o Xpand!2 = 008 Hard Leads - Dangerous
-para sons de mensagem 1, utilizei o Xpand!2 = 009 Ambience + FX - Jet Lord+
+====refazer==== para sons de mensagem 1, utilizei o Xpand!2 = 009 Ambience + FX - Jet Lord+
 som de pacote explodindo 1, utilizei o Xpand!2 = 009 Ambience + FX - Gyroscope+
 som de pacote esteira 1, utilizei o Xpand!2 = 009 Ambience + FX - Tires+
 para música de fundo do jogo:
