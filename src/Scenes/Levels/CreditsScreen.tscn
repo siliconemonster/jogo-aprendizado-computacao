@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Resources/Fonts/playmegames_36.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Resources/Fonts/playmegames_64.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/Scenes/Levels/return_to_title.gd" type="Script" id=3]
+[ext_resource path="res://assets/audio/Menu Select.wav" type="AudioStream" id=4]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 1.006
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -41,21 +46,21 @@ valign = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="Credits"]
 margin_top = 69.0
 margin_right = 904.0
-margin_bottom = 436.0
+margin_bottom = 439.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Credits/HBoxContainer"]
 margin_right = 462.0
-margin_bottom = 367.0
+margin_bottom = 370.0
 size_flags_horizontal = 3
 custom_constants/separation = 30
 alignment = 1
 
 [node name="Label" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
-margin_top = 98.0
+margin_top = 99.0
 margin_right = 462.0
-margin_bottom = 135.0
+margin_bottom = 136.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -64,9 +69,9 @@ text = "Aline Rezende"
 valign = 1
 
 [node name="Label2" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
-margin_top = 165.0
+margin_top = 166.0
 margin_right = 462.0
-margin_bottom = 202.0
+margin_bottom = 203.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -75,9 +80,9 @@ text = "Guilherme Gomes"
 valign = 1
 
 [node name="Label3" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
-margin_top = 232.0
+margin_top = 233.0
 margin_right = 462.0
-margin_bottom = 269.0
+margin_bottom = 270.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -88,15 +93,15 @@ valign = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="Credits/HBoxContainer"]
 margin_left = 466.0
 margin_right = 904.0
-margin_bottom = 367.0
+margin_bottom = 370.0
 size_flags_horizontal = 3
 custom_constants/separation = 30
 alignment = 1
 
 [node name="Label" type="Label" parent="Credits/HBoxContainer/VBoxContainer2"]
-margin_top = 98.0
+margin_top = 99.0
 margin_right = 438.0
-margin_bottom = 135.0
+margin_bottom = 136.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -104,11 +109,14 @@ custom_constants/shadow_offset_y = 5
 text = "Leticia Tavares"
 align = 2
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label2" type="Label" parent="Credits/HBoxContainer/VBoxContainer2"]
-margin_top = 165.0
+margin_top = 166.0
 margin_right = 438.0
-margin_bottom = 202.0
+margin_bottom = 203.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -118,9 +126,9 @@ align = 2
 valign = 1
 
 [node name="Label3" type="Label" parent="Credits/HBoxContainer/VBoxContainer2"]
-margin_top = 232.0
+margin_top = 233.0
 margin_right = 438.0
-margin_bottom = 269.0
+margin_bottom = 270.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -130,15 +138,26 @@ align = 2
 valign = 1
 
 [node name="Button" type="Button" parent="Credits"]
-margin_top = 440.0
+margin_top = 443.0
 margin_right = 904.0
-margin_bottom = 480.0
-rect_min_size = Vector2( 180, 40 )
+margin_bottom = 483.0
+rect_min_size = Vector2( 180.026, 40 )
+size_flags_stretch_ratio = 0.14
+theme = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 flat = true
 
 [node name="Label" type="Label" parent="Credits/Button"]
-margin_right = 154.0
-margin_bottom = 37.0
+anchor_left = -0.003
+anchor_right = -0.002
+margin_left = 1.5874
+margin_top = 6.0
+margin_right = 281.0
+margin_bottom = 48.1118
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 1 )
@@ -149,4 +168,10 @@ text = "VOLTAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MenuSelect" type="AudioStreamPlayer" parent="Credits"]
+stream = ExtResource( 4 )
+[connection signal="button_down" from="Credits/Button" to="." method="_on_Button_button_down"]
+[connection signal="gui_input" from="Credits/Button" to="." method="_on_Button_gui_input"]
 [connection signal="pressed" from="Credits/Button" to="." method="_on_Button_pressed"]
+[connection signal="ready" from="Credits/Button" to="." method="_on_Button_ready"]

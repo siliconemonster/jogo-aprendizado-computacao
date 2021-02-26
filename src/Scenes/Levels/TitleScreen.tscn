@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/Resources/Fonts/playmegames_64.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Scenes/Buttons/NewGameButton.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://src/Scenes/Levels/TitleScreen.gd" type="Script" id=7]
 [ext_resource path="res://assets/Resources/Fonts/playmegames_36.tres" type="DynamicFont" id=8]
 [ext_resource path="res://assets/Resources/Fonts/manaspc.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/audio/Menu Move.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/audio/Menu Select.wav" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -59,20 +61,25 @@ custom_constants/separation = 30
 alignment = 1
 
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 100.0
-margin_right = 568.0
-margin_bottom = 160.0
+margin_top = 95.0
+margin_right = 310.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 310, 70 )
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 2.14
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_constants/hseparation = 0
 
 [node name="InstructionsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 190.0
+margin_top = 195.0
 margin_right = 568.0
-margin_bottom = 250.0
+margin_bottom = 255.0
 scene_to_load = "res://src/Scenes/Levels/TestLevel.tscn"
 
 [node name="CreditsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
-margin_top = 280.0
+margin_top = 285.0
 margin_right = 568.0
-margin_bottom = 340.0
+margin_bottom = 345.0
 scene_to_load = "res://src/Scenes/Levels/CreditsScreen.tscn"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/CenterRow"]
@@ -130,6 +137,20 @@ text = "0000"
 align = 1
 valign = 1
 
+[node name="MenuMove" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource( 10 )
+
+[node name="MenuSelect" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource( 11 )
+
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 visible = false
+[connection signal="button_up" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_button_up"]
+[connection signal="gui_input" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_gui_input"]
+[connection signal="mouse_entered" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_mouse_entered"]
+[connection signal="gui_input" from="Menu/CenterRow/Buttons/InstructionsButton" to="." method="_on_InstructionsButton_gui_input"]
+[connection signal="mouse_entered" from="Menu/CenterRow/Buttons/InstructionsButton" to="." method="_on_InstructionsButton_mouse_entered"]
+[connection signal="button_down" from="Menu/CenterRow/Buttons/CreditsButton" to="." method="_on_CreditsButton_button_down"]
+[connection signal="gui_input" from="Menu/CenterRow/Buttons/CreditsButton" to="." method="_on_CreditsButton_gui_input"]
+[connection signal="mouse_entered" from="Menu/CenterRow/Buttons/CreditsButton" to="." method="_on_CreditsButton_mouse_entered"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
