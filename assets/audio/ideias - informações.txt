@@ -16,7 +16,7 @@ som de perda
 Samplers usados:
 para sons de sucesso 1, 2, 3 e 4, utilizei o Xpand!2 = 018 Bells - Wavetable Bells 1+
 para sons de erro 1,  utilizei o Xpand!2 = 008 Hard Leads - Dangerous
-====refazer==== para sons de mensagem 1, utilizei o Xpand!2 = 009 Ambience + FX - Jet Lord+
+para sons de mensagem 1, utilizei o Xpand!2 = 009 Ambience + FX - Jet Lord+
 sons de pacote explodindo 1 e 2, utilizei o Xpand!2 = 009 Ambience + FX - Gyroscope+
 som de pacote esteira 1, utilizei o Xpand!2 = 009 Ambience + FX - Tires+ E
 				e o D-Verb = Church/Large com HF em 943Hz
@@ -24,6 +24,14 @@ para música de fundo do jogo:
 	 na melodia utilizei o Xpand!2 = 008 Hard Leads - Dynamic Dirt
 	 na harmonia utilizei o Xpand!2 = 005 Polysynths - Digitallica+
 	 na batida utilizei o Xpand!2 = 024 Drums - Kicks Menu
+
+para música de fundo do jogo:
+	na melodia utilizei o PULS
+	na harmonia utilizei o PULS
+	na batida utilizei o 80s KIT (BeatSkillz)
+
+	na versão 1 pode-se melhorar: batida e harmonia
+
 
 --------------------------------------------------------------------------------------
 
