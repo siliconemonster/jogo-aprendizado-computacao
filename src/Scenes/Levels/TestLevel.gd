@@ -23,7 +23,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func gameOver():
-	get_tree().change_scene("res://src/Scenes/Buttons/CreditsButton.tscn")
+	get_tree().change_scene("res://src/Scenes/Levels/GameOverScreen.tscn")
 
 func _on_PackageSlotDespawner_packageLost():
 	set_health(health-1)
