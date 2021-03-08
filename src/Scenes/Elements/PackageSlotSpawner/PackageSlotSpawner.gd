@@ -3,7 +3,7 @@ extends Node2D
 const PackageSlotResource = preload("res://src/Scenes/Elements/PackageSlot/PackageSlot.tscn")
 const PackageResource = preload("res://src/Scenes/Elements/Package/Package.tscn")
 
-export var seconds_between_spawns := 0.8
+export var seconds_between_spawns := 1.5
 export var spawns_packages := true
 
 var _seconds_since_last_spawn = 0.0
