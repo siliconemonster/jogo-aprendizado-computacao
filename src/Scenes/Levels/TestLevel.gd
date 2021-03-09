@@ -31,10 +31,7 @@ func _on_PackageSlotDespawner_packageLost():
 		gameOver()
 	$Control/Health.text = "HEALTH      " +str(health)
 
-
-
-func _on_PackageSlotDespawner2_packageDelivered():
+func _on_PackageSlotDespawner_packageDelivered():
 	set_score(score +5)
 	$Control/Score.text = "SCORE      " +str(score)
-	
 	pass # Replace with function body.
