@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/créditos_versão1.wav-8070d914224f9a2b4c083789558db776.sample"
+path="res://.import/créditos_versão1.wav-080ed581d79a2fff298a4087927d4856.sample"
 
 [deps]
 
-source_file="res://assets/audio/créditos_versão1.wav"
-dest_files=[ "res://.import/créditos_versão1.wav-8070d914224f9a2b4c083789558db776.sample" ]
+source_file="res://assets/Audio/créditos_versão1.wav"
+dest_files=[ "res://.import/créditos_versão1.wav-080ed581d79a2fff298a4087927d4856.sample" ]
 
 [params]
 
