@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/erro - opção 1.wav-b39bc0969a4ec53075c4596226f8ed85.sample"
+path="res://.import/erro - opção 1.wav-345fc61f7694136d52bd61aeb2f3b48b.sample"
 
 [deps]
 
-source_file="res://assets/Audio/erro - opção 1.wav"
-dest_files=[ "res://.import/erro - opção 1.wav-b39bc0969a4ec53075c4596226f8ed85.sample" ]
+source_file="res://assets/audio/erro - opção 1.wav"
+dest_files=[ "res://.import/erro - opção 1.wav-345fc61f7694136d52bd61aeb2f3b48b.sample" ]
 
 [params]
 

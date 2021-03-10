@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/fundo_versão1.wav-500df0a624242f5812886a07ce94aecc.sample"
+path="res://.import/fundo_versão1.wav-80de9be5f391bc73aeb5d34f22955972.sample"
 
 [deps]
 
-source_file="res://assets/Audio/fundo_versão1.wav"
-dest_files=[ "res://.import/fundo_versão1.wav-500df0a624242f5812886a07ce94aecc.sample" ]
+source_file="res://assets/audio/fundo_versão1.wav"
+dest_files=[ "res://.import/fundo_versão1.wav-80de9be5f391bc73aeb5d34f22955972.sample" ]
 
 [params]
 

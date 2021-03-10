@@ -25,7 +25,7 @@ func _ready():
 func gameOver():
 	get_tree().change_scene("res://src/Scenes/Levels/GameOverScreen.tscn")
 
-func _on_PackageSlotDespawner_packageLost():
+func on_packageLost():
 	set_health(health-1)
 	if health == 0:
 		gameOver()
