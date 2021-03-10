@@ -2,7 +2,7 @@ tool
 extends StaticBody2D
 
 enum Tile {Middle, Start, End}
-enum Colors {Green, Blue}
+enum Colors {Green, Blue, Orange}
 
 export(Tile) var conveyor_tile
 export(Colors) var conveyor_color
@@ -30,6 +30,10 @@ func updatesVisibleAnimatedTexture():
 	$BlueConveyorBeltAnimatedTexture.visible = false
 	$EndBlueConveyorBeltAnimatedTexture.visible = false
 	
+	$StartOrangeConveyorBeltAnimatedTexture.visible = false
+	$OrangeConveyorBeltAnimatedTexture.visible = false
+	$EndOrangeConveyorBeltAnimatedTexture.visible = false
+	
 	if conveyor_color == Colors.Green:
 		if conveyor_tile == Tile.Middle:
 			$GreenConveyorBeltAnimatedTexture.visible = true
@@ -44,6 +48,13 @@ func updatesVisibleAnimatedTexture():
 			$StartBlueConveyorBeltAnimatedTexture.visible = true
 		elif conveyor_tile == Tile.End:
 			$EndBlueConveyorBeltAnimatedTexture.visible = true
+	if conveyor_color == Colors.Orange:
+		if conveyor_tile == Tile.Middle:
+			$OrangeConveyorBeltAnimatedTexture.visible = true
+		elif conveyor_tile == Tile.Start:
+			$StartOrangeConveyorBeltAnimatedTexture.visible = true
+		elif conveyor_tile == Tile.End:
+			$EndOrangeConveyorBeltAnimatedTexture.visible = true
 	return
 
 func unloadInvisibleAnimatedTextures():
