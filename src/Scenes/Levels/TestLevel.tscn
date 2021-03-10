@@ -4,11 +4,11 @@
 [ext_resource path="res://src/Scenes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Resources/Tilesets/standardBG_tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://src/Scenes/Elements/ConveyorBelt/ConveyorBelt.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/PackageSlotDespawner.gd" type="Script" id=5]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotSpawner/PackageSlotSpawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/PackageSlotDespawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/RightPackageSlotDespawner.gd" type="Script" id=8]
 [ext_resource path="res://src/Scenes/Levels/Control.gd" type="Script" id=9]
+[ext_resource path="res://src/Scenes/Elements/PackageSlot/PackageSlot.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://src/arcadeclassic/ARCADECLASSIC.TTF"
@@ -123,14 +123,14 @@ scale = Vector2( -1, 1 )
 position = Vector2( 1200, 320 )
 scale = Vector2( -1, 1 )
 
-[node name="ConveyorBelt14" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
+[node name="ConveyorBelt15" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 2
 
-[node name="PackageSlotDespawner" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1384.26, 342.789 )
-script = ExtResource( 5 )
+[node name="ConveyorBelt14" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
+position = Vector2( 1360, 320 )
+scale = Vector2( -1, 1 )
+conveyor_tile = 2
 
 [node name="PackageSlotSpawner" parent="." instance=ExtResource( 6 )]
 position = Vector2( 200, 200 )
@@ -206,6 +206,11 @@ spawns_packages = false
 [node name="PackageSlotDespawner3" parent="LeftGreenExitBelt" instance=ExtResource( 7 )]
 position = Vector2( -114.211, 670.184 )
 script = ExtResource( 8 )
-[connection signal="packageLost" from="PackageSlotDespawner" to="." method="_on_PackageSlotDespawner_packageLost"]
+
+[node name="PackageSlot" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1391.72, 344.271 )
+
+[node name="PackageSlot2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 217.833, 416.588 )
 [connection signal="packageDelivered" from="RightBlueExitBelt/PackageSlotDespawner2" to="." method="_on_PackageSlotDespawner_packageDelivered"]
 [connection signal="packageDelivered" from="LeftGreenExitBelt/PackageSlotDespawner3" to="." method="_on_PackageSlotDespawner_packageDelivered"]

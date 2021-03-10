@@ -60,6 +60,7 @@ func grabPackage():
 	for package_slot in _package_slots_in_range:
 		if package_slot.package_held != null:
 			target_slot = package_slot
+			package_slot.queue_free()
 			break
 	if target_slot == null:
 		return
