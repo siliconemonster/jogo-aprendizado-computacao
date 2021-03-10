@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sucesso - opção 4.wav-3aa203b2e6e6326dec654d1b4c082831.sample"
+path="res://.import/sucesso - opção 4.wav-1e17cb15dcc57381d7a0be532f6a5814.sample"
 
 [deps]
 
-source_file="res://assets/audio/sucesso - opção 4.wav"
-dest_files=[ "res://.import/sucesso - opção 4.wav-3aa203b2e6e6326dec654d1b4c082831.sample" ]
+source_file="res://assets/Audio/sucesso - opção 4.wav"
+dest_files=[ "res://.import/sucesso - opção 4.wav-1e17cb15dcc57381d7a0be532f6a5814.sample" ]
 
 [params]
 

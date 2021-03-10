@@ -14,8 +14,8 @@ func set_score(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Control/Health.text = "HEALTH      " +str(health)
-	$Control/Score.text = "SCORE      " +str(score)
+	$HUD/Control/Health.text = "HEALTH      " +str(health)
+	$HUD/Control/Score.text = "SCORE      " +str(score)
 	pass # Replace with function body.
 
 
@@ -29,9 +29,9 @@ func _on_PackageSlotDespawner_packageLost():
 	set_health(health-1)
 	if health == 0:
 		gameOver()
-	$Control/Health.text = "HEALTH      " +str(health)
+	$HUD/Control/Health.text = "HEALTH      " +str(health)
 
 func _on_PackageSlotDespawner_packageDelivered():
 	set_score(score +5)
-	$Control/Score.text = "SCORE      " +str(score)
+	$HUD/Control/Score.text = "SCORE      " +str(score)
 	pass # Replace with function body.

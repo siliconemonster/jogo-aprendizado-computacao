@@ -14,3 +14,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	move_and_slide(movement_direction * movement_speed)
+
+func _on_PackageSlotDestructionDetector_body_entered(body: Node) -> void:
+	#TODO
+	#Lógica de fazer o jogador perder vida ou gameover ao pacote ser destruído ao cair em cima de outro em caso de fila cheia.
+	#TODO
+	#Animação de pacote sendo destruido.
+	self.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Scenes/Elements/PackageSlot/PackageSlot.gd" type="Script" id=1]
 [ext_resource path="res://assets/Sprites/package.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 extents = Vector2( 38.64, 26.8482 )
 
 [sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 28.3806, 2.98832 )
 
 [node name="PackageSlot" type="KinematicBody2D"]
 z_index = 1
@@ -31,4 +34,15 @@ collision_mask = 4
 modulate = Color( 0.396078, 0.745098, 0.156863, 1 )
 position = Vector2( 0, -9 )
 shape = SubResource( 2 )
+
+[node name="PackageSlotDestructionDetector" type="Area2D" parent="."]
+position = Vector2( 0, 5 )
+monitorable = false
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PackageSlotDestructionDetector"]
+modulate = Color( 0, 0, 0, 1 )
+shape = SubResource( 3 )
 [connection signal="area_entered" from="ConveyorBeltTrackDetector" to="." method="_on_ConveyorBeltTrackDetector_area_entered"]
+[connection signal="body_entered" from="PackageSlotDestructionDetector" to="." method="_on_PackageSlotDestructionDetector_body_entered"]
