@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Scenes/Levels/TestLevel.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Resources/Tilesets/standardBG_tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://src/Scenes/Elements/ConveyorBelt/ConveyorBelt.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/audio/fundo_versão1.wav" type="AudioStream" id=5]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotSpawner/PackageSlotSpawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/PackageSlotDespawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/RightPackageSlotDespawner.gd" type="Script" id=8]
+[ext_resource path="res://assets/audio/esteira - opção 1.wav" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22.092, 31.3602 )
@@ -58,66 +60,79 @@ conveyor_color = 2
 [node name="ConveyorBelt2" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 320, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt3" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 400, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt4" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 480, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt5" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 560, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt6" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 640, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt7" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 720, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt8" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 800, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt9" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 880, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt10" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 960, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt11" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1040, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt12" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1120, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt13" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1200, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt15" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt14" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
@@ -155,26 +170,31 @@ conveyor_color = 1
 [node name="ConveyorBelt3" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1360, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt7" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt4" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1440, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt5" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1520, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt6" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1600, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="LeftGreenExitBelt" type="Node2D" parent="."]
@@ -182,21 +202,32 @@ conveyor_color = 1
 [node name="ConveyorBelt" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 320, 640 )
 conveyor_tile = 1
+conveyor_color = 0
 
 [node name="ConveyorBelt2" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 160, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt4" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 80, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt5" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 0, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt6" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( -80, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt3" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 240, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="PackageSlotSpawner3" parent="LeftGreenExitBelt" instance=ExtResource( 6 )]
 position = Vector2( 380.93, 673 )
@@ -233,5 +264,14 @@ custom_fonts/font = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Musica_fundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "Musics"
+
+[node name="Esteira" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 13.126
+bus = "Effects"
 [connection signal="packageDelivered" from="RightBlueExitBelt/PackageSlotDespawner2" to="." method="_on_PackageSlotDespawner_packageDelivered"]
 [connection signal="packageDelivered" from="LeftGreenExitBelt/PackageSlotDespawner3" to="." method="_on_PackageSlotDespawner_packageDelivered"]

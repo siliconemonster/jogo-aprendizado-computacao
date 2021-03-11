@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/Resources/Fonts/playmegames_64.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Scenes/Buttons/NewGameButton.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://assets/Resources/Fonts/manaspc.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://assets/audio/Menu Move.wav" type="AudioStream" id=10]
 [ext_resource path="res://assets/audio/Menu Select.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/audio/Menu_fundo.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/Sprites/speaker-icon-sound-icon-white.png" type="Texture" id=13]
+[ext_resource path="res://assets/Sprites/sem_som.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -139,12 +142,44 @@ valign = 1
 
 [node name="MenuMove" type="AudioStreamPlayer" parent="Menu"]
 stream = ExtResource( 10 )
+bus = "Selection"
 
 [node name="MenuSelect" type="AudioStreamPlayer" parent="Menu"]
 stream = ExtResource( 11 )
+bus = "Selection"
 
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 visible = false
+
+[node name="Musica_fundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+bus = "Musics"
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 125.749
+margin_top = 456.527
+margin_right = 214.749
+margin_bottom = 552.527
+rect_scale = Vector2( 1.8, 2 )
+min_value = -65.0
+max_value = -19.0
+value = -19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botao_som" type="TextureButton" parent="HSlider"]
+margin_left = -67.2339
+margin_top = 21.5313
+margin_right = 832.766
+margin_bottom = 541.531
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_up" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_button_up"]
 [connection signal="gui_input" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_gui_input"]
 [connection signal="mouse_entered" from="Menu/CenterRow/Buttons/NewGameButton" to="." method="_on_NewGameButton_mouse_entered"]
@@ -154,3 +189,7 @@ visible = false
 [connection signal="gui_input" from="Menu/CenterRow/Buttons/CreditsButton" to="." method="_on_CreditsButton_gui_input"]
 [connection signal="mouse_entered" from="Menu/CenterRow/Buttons/CreditsButton" to="." method="_on_CreditsButton_mouse_entered"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[connection signal="mouse_exited" from="HSlider" to="." method="release_focus"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="HSlider/botao_som" to="." method="_on_botao_som_pressed"]
+[connection signal="pressed" from="HSlider/botao_som" to="." method="_on_TextureButton_pressed"]

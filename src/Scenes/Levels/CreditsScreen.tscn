@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Resources/Fonts/playmegames_36.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Resources/Fonts/playmegames_64.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/audio/créditos_versão3.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/Menu Select.wav" type="AudioStream" id=4]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Control
+
+func _ready():
+	$Credits/Musica_creditos.play()
+	
 
 func _on_Button_pressed():
 	get_tree().change_scene(\"res://src/Scenes/Levels/TitleScreen.tscn\")
@@ -188,6 +193,11 @@ __meta__ = {
 
 [node name="MenuSelect" type="AudioStreamPlayer" parent="Credits"]
 stream = ExtResource( 4 )
+bus = "Selection"
+
+[node name="Musica_creditos" type="AudioStreamPlayer" parent="Credits"]
+stream = ExtResource( 3 )
+bus = "Musics"
 [connection signal="button_down" from="Credits/Button" to="." method="_on_Button_button_down"]
 [connection signal="gui_input" from="Credits/Button" to="." method="_on_Button_gui_input"]
 [connection signal="pressed" from="Credits/Button" to="." method="_on_Button_pressed"]

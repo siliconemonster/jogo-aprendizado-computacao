@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fundo_menu.wav-fbec9a6fa3a0cef793f977dfc272f656.sample"
+
+[deps]
+
+source_file="res://assets/audio/fundo_menu.wav"
+dest_files=[ "res://.import/fundo_menu.wav-fbec9a6fa3a0cef793f977dfc272f656.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

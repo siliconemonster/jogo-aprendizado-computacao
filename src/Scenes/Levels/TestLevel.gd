@@ -21,6 +21,8 @@ func set_score(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Esteira.play()
+	$Musica_fundo.play()
 	$HUD/Control/Health.text = "HEALTH      " +str(health)
 	$HUD/Control/Score.text = "SCORE      " +str(score)
 	pass # Replace with function body.
