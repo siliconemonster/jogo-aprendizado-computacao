@@ -2,9 +2,13 @@ extends Control
 
 var scene_path_to_load
 var music_on = true
+var volume
 
 var _texture1 = load("res://assets/Sprites/speaker-icon-sound-icon-white.png")
 var _texture2 = load("res://assets/Sprites/sem_som.png")
+var _texture3 = load("res://assets/Sprites/som_baixo.png")
+var _texture4 = load("res://assets/Sprites/som_medio.png")
+var _texturaAtual
 
 func _ready():
 	$Musica_fundo.play()
@@ -51,7 +55,24 @@ func _on_NewGameButton_mouse_entered():
 
 func _on_HSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), value)
-
+	volume = value
+	
+	if (value <= -64):
+		$HSlider/botao_som.texture_normal = _texture2
+		_texturaAtual = _texture2
+		
+	if (value > -64 and value <= -50):
+		$HSlider/botao_som.texture_normal = _texture3
+		_texturaAtual = _texture3
+		
+	if (value > -50 and value <= -35):
+		$HSlider/botao_som.texture_normal = _texture4
+		_texturaAtual = _texture4
+		
+	if (value > -35 and value <= -19):
+		$HSlider/botao_som.texture_normal = _texture1
+		_texturaAtual = _texture1
+	
 func _on_botao_som_pressed():
 	
 	if (music_on):
@@ -60,8 +81,8 @@ func _on_botao_som_pressed():
 		music_on = false
 		
 	else:
-		$HSlider/botao_som.texture_normal = _texture1
+		$HSlider/botao_som.texture_normal = _texturaAtual
 		music_on = true
-		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), -19)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), volume)
 	
 
