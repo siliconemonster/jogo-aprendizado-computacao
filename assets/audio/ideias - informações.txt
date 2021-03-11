@@ -20,14 +20,18 @@ para sons de mensagem 1, utilizei o Xpand!2 = 009 Ambience + FX - Jet Lord+
 sons de pacote explodindo 1 e 2, utilizei o Xpand!2 = 009 Ambience + FX - Gyroscope+
 som de pacote esteira 1, utilizei o Xpand!2 = 009 Ambience + FX - Tires+ E
 				e o D-Verb = Church/Large com HF em 943Hz
+
 para música de fundo do jogo: ====100 BPM====
 	na melodia utilizei o Xpand!2 = 008 Hard Leads - Dynamic Dirt
 	na harmonia utilizei o Xpand!2 = 005 Polysynths - Digitallica+
 	na batida utilizei o Xpand!2 = 024 Drums - Kicks Menu
 
-	na versão 1 pode-se melhorar: TUDO, inclusive aumentar
+para música de fundo do menu: ====100 BPM====
+	igual acima, só adicionei reverb
 
-para música de fundo do jogo: ====120 BPM ====
+	na master utilizei o reverb DragonflyReverb para ambientação
+
+para música de créditos: ====120 BPM ====
 	na melodia utilizei o PULS
 	na harmonia utilizei o PULS
 	na batida utilizei o 80s KIT (BeatSkillz)
