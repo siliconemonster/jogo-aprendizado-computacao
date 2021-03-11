@@ -14,7 +14,7 @@ func set_health(value):
 	
 func set_score(value):
 	score = value
-	if (score-threshold_max_score)%50 == 0:
+	if (score-threshold_max_score)%5 == 0:
 		emit_signal("scoreThreshold")
 		threshold_max_score = score
 

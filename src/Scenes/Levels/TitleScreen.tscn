@@ -74,7 +74,7 @@ custom_constants/hseparation = 0
 margin_top = 195.0
 margin_right = 568.0
 margin_bottom = 255.0
-scene_to_load = "res://src/Scenes/Levels/InstructionsScreen.tscn"
+scene_to_load = "res://src/Scenes/Levels/TestLevel.tscn"
 
 [node name="CreditsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
 margin_top = 285.0
