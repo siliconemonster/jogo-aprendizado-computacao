@@ -15,8 +15,15 @@ func read_savegame():
    savegame.close() #close the file
    return save_data["highscore"] #return the value
 
+func create_save():
+   savegame.open(save_path, File.WRITE)
+   savegame.store_var(save_data)
+   savegame.close()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if not savegame.file_exists(save_path):
+		create_save()
 	self.text = str(self.read_savegame())
 	pass # Replace with function body.
 

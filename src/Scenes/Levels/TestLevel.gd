@@ -21,8 +21,6 @@ func set_score(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if not savegame.file_exists(save_path):
-		create_save()
 	$Esteira.play()
 	$Musica_fundo.play()
 	$HUD/Control/Health.text = "HEALTH      " +str(health)
@@ -63,11 +61,6 @@ func _on_GreenPackageSlotDespawner_packageLost():
 var savegame = File.new() #file
 var save_path = "user://savegame.save" #place of the file
 var save_data = {"highscore": 0} #variable to store data
-
-func create_save():
-   savegame.open(save_path, File.WRITE)
-   savegame.store_var(save_data)
-   savegame.close()
 
 func save(high_score):    
    save_data["highscore"] = score #data to save
