@@ -22,7 +22,8 @@ func _process(delta: float) -> void:
 		spawn_package_slot()
 #Change the speed of spawner based on score
 func on_ScoreThreshold():
-	self.seconds_between_spawns = self.seconds_between_spawns - 0.1
+	if seconds_between_spawns > 1.2:
+		self.seconds_between_spawns = self.seconds_between_spawns - 0.1
 #Resets the speed of the package spawn based on the time-out event
 func on_hpLost():
 	self.seconds_between_spawns = initial_seconds_between_spawns
