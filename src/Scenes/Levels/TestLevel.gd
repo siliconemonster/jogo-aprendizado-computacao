@@ -4,12 +4,19 @@ extends Node2D
 # Declare member variables here. Examples:
 var health = 3 setget set_health
 var score = 0 setget set_score
+var threshold_max_score = 0
+signal scoreThreshold
+signal hpLost
 
 func set_health(value):
 	health = value
+	emit_signal("hpLost")
 	
 func set_score(value):
 	score = value
+	if (score-threshold_max_score)%50 == 0:
+		emit_signal("scoreThreshold")
+		threshold_max_score = score
 
 
 # Called when the node enters the scene tree for the first time.
