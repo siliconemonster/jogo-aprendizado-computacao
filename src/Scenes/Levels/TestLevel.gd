@@ -21,6 +21,8 @@ func set_score(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if not savegame.file_exists(save_path):
+		create_save()
 	$Esteira.play()
 	$Musica_fundo.play()
 	$HUD/Control/Health.text = "HEALTH      " +str(health)
@@ -32,6 +34,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func gameOver():
+	self.save(score)
 	get_tree().change_scene("res://src/Scenes/Levels/GameOverScreen.tscn")
 
 func on_packageLost():
@@ -55,3 +58,19 @@ func _on_GreenPackageSlotDespawner_packageDelivered():
 	self.on_packageDelivered()
 func _on_GreenPackageSlotDespawner_packageLost():
 	self.on_packageLost()
+
+#Sessão do highscore
+var savegame = File.new() #file
+var save_path = "user://savegame.save" #place of the file
+var save_data = {"highscore": 0} #variable to store data
+
+func create_save():
+   savegame.open(save_path, File.WRITE)
+   savegame.store_var(save_data)
+   savegame.close()
+
+func save(high_score):    
+   save_data["highscore"] = score #data to save
+   savegame.open(save_path, File.WRITE) #open file to write
+   savegame.store_var(save_data) #store the data
+   savegame.close() # close the file
