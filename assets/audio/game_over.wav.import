@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Menu Select.wav-c9c758fa3f34702a807c5ae8e009289b.sample"
+path="res://.import/game_over.wav-3891a8851d721aeadbe060101aeb53c3.sample"
 
 [deps]
 
-source_file="res://assets/audio/Menu Select.wav"
-dest_files=[ "res://.import/Menu Select.wav-c9c758fa3f34702a807c5ae8e009289b.sample" ]
+source_file="res://assets/audio/game_over.wav"
+dest_files=[ "res://.import/game_over.wav-3891a8851d721aeadbe060101aeb53c3.sample" ]
 
 [params]
 

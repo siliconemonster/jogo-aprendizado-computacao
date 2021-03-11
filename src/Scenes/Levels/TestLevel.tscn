@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Scenes/Levels/TestLevel.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Player/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/GreenPackageSlotDespawner.gd" type="Script" id=8]
 [ext_resource path="res://assets/audio/esteira - opção 1.wav" type="AudioStream" id=9]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/BluePackageSlotDespawner.gd" type="Script" id=10]
+[ext_resource path="res://assets/audio/sucesso - opção 3.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/audio/erro - opção 1.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/Sprites/speaker-icon-sound-icon-white.png" type="Texture" id=13]
+[ext_resource path="res://assets/Sprites/sem_som.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22.092, 31.3602 )
@@ -61,66 +65,79 @@ conveyor_color = 2
 [node name="ConveyorBelt2" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 320, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt3" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 400, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt4" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 480, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt5" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 560, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt6" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 640, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt7" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 720, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt8" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 800, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt9" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 880, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt10" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 960, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt11" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1040, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt12" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1120, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt13" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1200, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt15" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 320 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt14" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
@@ -158,26 +175,31 @@ conveyor_color = 1
 [node name="ConveyorBelt3" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1360, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt7" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt4" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1440, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt5" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1520, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt6" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1600, 640 )
 scale = Vector2( -1, 1 )
+conveyor_tile = 0
 conveyor_color = 1
 
 [node name="LeftGreenExitBelt" type="Node2D" parent="."]
@@ -185,21 +207,32 @@ conveyor_color = 1
 [node name="ConveyorBelt" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 320, 640 )
 conveyor_tile = 1
+conveyor_color = 0
 
 [node name="ConveyorBelt2" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 160, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt4" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 80, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt5" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 0, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt6" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( -80, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="ConveyorBelt3" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 240, 640 )
+conveyor_tile = 0
+conveyor_color = 0
 
 [node name="PackageSlotSpawner3" parent="LeftGreenExitBelt" instance=ExtResource( 6 )]
 position = Vector2( 380.93, 673 )
@@ -245,7 +278,42 @@ bus = "Musics"
 stream = ExtResource( 9 )
 volume_db = 13.126
 bus = "Effects"
+
+[node name="Acerto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+bus = "Effects"
+
+[node name="Erro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 65.749
+margin_top = 822.527
+margin_right = 154.749
+margin_bottom = 918.527
+rect_scale = Vector2( 1.8, 2 )
+min_value = -65.0
+max_value = -19.0
+value = -19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botao_som" type="TextureButton" parent="HSlider"]
+margin_left = -67.2339
+margin_top = 21.5313
+margin_right = 832.766
+margin_bottom = 541.531
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="packageDelivered" from="RightBlueExitBelt/BluePackageDespawner" to="." method="_on_BluePackageDespawner_packageDelivered"]
 [connection signal="packageLost" from="RightBlueExitBelt/BluePackageDespawner" to="." method="_on_BluePackageDespawner_packageLost"]
 [connection signal="packageDelivered" from="LeftGreenExitBelt/GreenPackageSlotDespawner" to="." method="_on_GreenPackageSlotDespawner_packageDelivered"]
 [connection signal="packageLost" from="LeftGreenExitBelt/GreenPackageSlotDespawner" to="." method="_on_GreenPackageSlotDespawner_packageLost"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="HSlider/botao_som" to="." method="_on_botao_som_pressed"]

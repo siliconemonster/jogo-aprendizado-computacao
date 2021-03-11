@@ -8,6 +8,20 @@ var threshold_max_score = 0
 signal scoreThreshold
 signal hpLost
 
+var _texture1 = load("res://assets/Sprites/speaker-icon-sound-icon-white.png")
+var _texture2 = load("res://assets/Sprites/sem_som.png")
+var _texture3 = load("res://assets/Sprites/som_baixo.png")
+var _texture4 = load("res://assets/Sprites/som_medio.png")
+var _texturaAtual
+
+var music_on = true
+var volume_anterior
+var volume
+
+func volume():
+	volume_anterior = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Musics"))
+	_on_HSlider_value_changed(volume_anterior)
+
 func set_health(value):
 	health = value
 	emit_signal("hpLost")
@@ -21,6 +35,7 @@ func set_score(value):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	volume()
 	$Esteira.play()
 	$Musica_fundo.play()
 	$HUD/Control/Health.text = "HEALTH      " +str(health)
@@ -36,12 +51,14 @@ func gameOver():
 	get_tree().change_scene("res://src/Scenes/Levels/GameOverScreen.tscn")
 
 func on_packageLost():
+	$Erro.play()
 	set_health(health-1)
 	if health == 0:
 		gameOver()
 	$HUD/Control/Health.text = "HEALTH      " +str(health)
 
 func on_packageDelivered():
+	$Acerto.play()
 	set_score(score +5)
 	$HUD/Control/Score.text = "SCORE      " +str(score)
 	pass # Replace with function body.
@@ -67,3 +84,38 @@ func save(high_score):
    savegame.open(save_path, File.WRITE) #open file to write
    savegame.store_var(save_data) #store the data
    savegame.close() # close the file
+
+
+func _on_HSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), value)
+	volume = value
+	
+	if (value <= -64):
+		$HSlider/botao_som.texture_normal = _texture2
+		_texturaAtual = _texture2
+		
+	if (value > -64 and value <= -50):
+		$HSlider/botao_som.texture_normal = _texture3
+		_texturaAtual = _texture3
+		
+	if (value > -50 and value <= -35):
+		$HSlider/botao_som.texture_normal = _texture4
+		_texturaAtual = _texture4
+		
+	if (value > -35 and value <= -19):
+		$HSlider/botao_som.texture_normal = _texture1
+		_texturaAtual = _texture1
+
+
+func _on_botao_som_pressed():
+	if (music_on):
+		$HSlider/botao_som.texture_normal = _texture2
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), -65)
+		music_on = false
+		
+	else:
+		$HSlider/botao_som.texture_normal = _texturaAtual
+		music_on = true
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), volume)
+	
+

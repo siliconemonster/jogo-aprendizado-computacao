@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/pacote explodindo - opção 1.wav-766b02e5e91802c49dcc1be821a98ba6.sample"
+path="res://.import/pacote explodindo - opção 1.wav-5b661dc45cb5aaaa4f9ff9bac00f49ac.sample"
 
 [deps]
 
-source_file="res://assets/Audio/pacote explodindo - opção 1.wav"
-dest_files=[ "res://.import/pacote explodindo - opção 1.wav-766b02e5e91802c49dcc1be821a98ba6.sample" ]
+source_file="res://assets/audio/pacote explodindo - opção 1.wav"
+dest_files=[ "res://.import/pacote explodindo - opção 1.wav-5b661dc45cb5aaaa4f9ff9bac00f49ac.sample" ]
 
 [params]
 

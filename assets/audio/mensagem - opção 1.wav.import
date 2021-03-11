@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/mensagem - opção 1.wav-2605692e5dc589b7407bd48bb535745f.sample"
+path="res://.import/mensagem - opção 1.wav-8b5ccc0c4959ae79ff7268ea07eec71a.sample"
 
 [deps]
 
-source_file="res://assets/Audio/mensagem - opção 1.wav"
-dest_files=[ "res://.import/mensagem - opção 1.wav-2605692e5dc589b7407bd48bb535745f.sample" ]
+source_file="res://assets/audio/mensagem - opção 1.wav"
+dest_files=[ "res://.import/mensagem - opção 1.wav-8b5ccc0c4959ae79ff7268ea07eec71a.sample" ]
 
 [params]
 
