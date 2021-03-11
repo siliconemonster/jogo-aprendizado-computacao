@@ -38,6 +38,11 @@ func spawn_package_slot():
 
 	if spawns_packages:
 		var package_instance = PackageResource.instance()
+		var color = randi()%10+1
+		if color <= 5:
+			package_instance.set_package_color("Blue")
+		elif color >5:
+			package_instance.set_package_color("Green")
 		package_slot_instance.package_held = package_instance
 		package_slot_instance.add_child(package_instance)
 	
