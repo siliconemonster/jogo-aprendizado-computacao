@@ -40,7 +40,18 @@ func on_packageLost():
 		gameOver()
 	$HUD/Control/Health.text = "HEALTH      " +str(health)
 
-func _on_PackageSlotDespawner_packageDelivered():
+func on_packageDelivered():
 	set_score(score +5)
 	$HUD/Control/Score.text = "SCORE      " +str(score)
 	pass # Replace with function body.
+
+func _on_BluePackageDespawner_packageDelivered():
+	self.on_packageDelivered()
+func _on_BluePackageDespawner_packageLost():
+	self.on_packageLost()
+	
+
+func _on_GreenPackageSlotDespawner_packageDelivered():
+	self.on_packageDelivered()
+func _on_GreenPackageSlotDespawner_packageLost():
+	self.on_packageLost()

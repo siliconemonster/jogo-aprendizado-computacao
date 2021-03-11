@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Scenes/Levels/TestLevel.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Player/Player.tscn" type="PackedScene" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://assets/audio/fundo_versão1.wav" type="AudioStream" id=5]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotSpawner/PackageSlotSpawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/PackageSlotDespawner.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/RightPackageSlotDespawner.gd" type="Script" id=8]
+[ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/GreenPackageSlotDespawner.gd" type="Script" id=8]
 [ext_resource path="res://assets/audio/esteira - opção 1.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Scenes/Elements/PackageSlotDespawner/BluePackageSlotDespawner.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22.092, 31.3602 )
@@ -139,9 +140,9 @@ shape = SubResource( 1 )
 
 [node name="RightBlueExitBelt" type="Node2D" parent="."]
 
-[node name="PackageSlotDespawner2" parent="RightBlueExitBelt" instance=ExtResource( 7 )]
+[node name="BluePackageDespawner" parent="RightBlueExitBelt" instance=ExtResource( 7 )]
 position = Vector2( 1633.9, 676.541 )
-script = ExtResource( 8 )
+script = ExtResource( 10 )
 
 [node name="PackageSlotSpawner2" parent="RightBlueExitBelt" instance=ExtResource( 6 )]
 position = Vector2( 1144, 673 )
@@ -205,7 +206,7 @@ position = Vector2( 380.93, 673 )
 seconds_between_spawns = 0.7
 spawns_packages = false
 
-[node name="PackageSlotDespawner3" parent="LeftGreenExitBelt" instance=ExtResource( 7 )]
+[node name="GreenPackageSlotDespawner" parent="LeftGreenExitBelt" instance=ExtResource( 7 )]
 position = Vector2( -114.211, 670.184 )
 script = ExtResource( 8 )
 
@@ -244,5 +245,7 @@ bus = "Musics"
 stream = ExtResource( 9 )
 volume_db = 13.126
 bus = "Effects"
-[connection signal="packageDelivered" from="RightBlueExitBelt/PackageSlotDespawner2" to="." method="_on_PackageSlotDespawner_packageDelivered"]
-[connection signal="packageDelivered" from="LeftGreenExitBelt/PackageSlotDespawner3" to="." method="_on_PackageSlotDespawner_packageDelivered"]
+[connection signal="packageDelivered" from="RightBlueExitBelt/BluePackageDespawner" to="." method="_on_BluePackageDespawner_packageDelivered"]
+[connection signal="packageLost" from="RightBlueExitBelt/BluePackageDespawner" to="." method="_on_BluePackageDespawner_packageLost"]
+[connection signal="packageDelivered" from="LeftGreenExitBelt/GreenPackageSlotDespawner" to="." method="_on_GreenPackageSlotDespawner_packageDelivered"]
+[connection signal="packageLost" from="LeftGreenExitBelt/GreenPackageSlotDespawner" to="." method="_on_GreenPackageSlotDespawner_packageLost"]

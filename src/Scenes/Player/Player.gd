@@ -115,13 +115,15 @@ func flipNodesBasedOnFacingDirection():
 		$PlayerSprite.set_flip_h(true)
 		$InteractableArea.scale.x = -1
 		if _package_currently_held != null:
-			_package_currently_held.find_node("Sprite").set_flip_h(true)
+			_package_currently_held.find_node("GreenPackage").set_flip_h(true)
+			_package_currently_held.find_node("BluePackage").set_flip_h(true)
 	# Facing Left:
 	elif _facing_direction == -1:
 			$PlayerSprite.set_flip_h(false)
 			$InteractableArea.scale.x = 1
 			if _package_currently_held != null:
-				_package_currently_held.find_node("Sprite").set_flip_h(false)
+				_package_currently_held.find_node("BluePackage").set_flip_h(false)
+				_package_currently_held.find_node("GreenPackage").set_flip_h(false)
 	return
 
 
