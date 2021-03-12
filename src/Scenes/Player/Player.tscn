@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Scenes/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/mov_walk_empty.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/mov_idle.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/mov_turn_empty.png" type="Texture" id=4]
+[ext_resource path="res://assets/Sprites/mov_walk_empty.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/mov_idle.png" type="Texture" id=3]
+[ext_resource path="res://assets/Sprites/mov_turn_empty.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26.1454, 92.768 )

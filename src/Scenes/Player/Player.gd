@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-onready var stats = $PlayerStats
 export var move_speed: = 600.0
 var _package_currently_held = null
 

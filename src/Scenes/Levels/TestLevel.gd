@@ -2,6 +2,7 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
+var global = get_node("res://src/Levels/global.gd")
 var health = 3 setget set_health
 var score = 0 setget set_score
 var threshold_max_score = 0
@@ -21,6 +22,7 @@ var volume
 func volume():
 	volume_anterior = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Musics"))
 	_on_HSlider_value_changed(volume_anterior)
+	$HSlider.value = volume_anterior
 
 func set_health(value):
 	health = value
@@ -47,6 +49,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func gameOver():
+	global.score = score
 	if score > self.read_savegame():
 		self.save(score)
 	get_tree().change_scene("res://src/Scenes/Levels/GameOverScreen.tscn")
@@ -113,6 +116,8 @@ func _on_HSlider_value_changed(value):
 	if (value > -35 and value <= -19):
 		$HSlider/botao_som.texture_normal = _texture1
 		_texturaAtual = _texture1
+		
+	$HSlider.focus_mode = false
 
 
 func _on_botao_som_pressed():

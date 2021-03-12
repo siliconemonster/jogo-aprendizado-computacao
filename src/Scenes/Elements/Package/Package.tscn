@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/sprites/package.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/package.png" type="Texture" id=1]
 [ext_resource path="res://assets/Sprites/blue_package.png" type="Texture" id=2]
 [ext_resource path="res://src/Scenes/Elements/Package/Package.gd" type="Script" id=3]
 

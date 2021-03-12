@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Resources/Fonts/PlayMeGames-Demo.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Resources/Fonts/playmegames_36.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/Scenes/Levels/game_over.gd" type="Script" id=3]
 [ext_resource path="res://assets/audio/Menu Select.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/audio/game_over.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Scenes/Levels/score.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -23,13 +24,14 @@ anchor_left = 0.0585938
 anchor_top = 0.1
 anchor_right = 0.941406
 anchor_bottom = 0.9
+custom_constants/separation = 29
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="Label" type="Label" parent="GameOver"]
 margin_right = 903.0
-margin_bottom = 436.0
+margin_bottom = 191.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
@@ -39,6 +41,14 @@ custom_constants/shadow_offset_y = 5
 text = "Game over"
 align = 1
 valign = 1
+
+[node name="Score" type="Label" parent="GameOver"]
+margin_top = 220.0
+margin_right = 903.0
+margin_bottom = 411.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+script = ExtResource( 6 )
 
 [node name="Button" type="Button" parent="GameOver"]
 margin_top = 440.0

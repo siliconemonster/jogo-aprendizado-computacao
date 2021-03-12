@@ -193,5 +193,5 @@ __meta__ = {
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
 [connection signal="mouse_exited" from="HSlider" to="." method="release_focus"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
-[connection signal="pressed" from="HSlider/botao_som" to="." method="_on_botao_som_pressed"]
 [connection signal="pressed" from="HSlider/botao_som" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="HSlider/botao_som" to="." method="_on_botao_som_pressed"]
