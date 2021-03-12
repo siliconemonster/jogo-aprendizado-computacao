@@ -65,79 +65,66 @@ conveyor_color = 2
 [node name="ConveyorBelt2" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 320, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt3" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 400, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt4" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 480, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt5" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 560, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt6" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 640, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt7" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 720, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt8" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 800, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt9" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 880, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt10" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 960, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt11" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1040, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt12" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1120, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt13" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1200, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt15" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 320 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 2
 
 [node name="ConveyorBelt14" parent="EntryConveyorBelt" instance=ExtResource( 4 )]
@@ -175,31 +162,26 @@ conveyor_color = 1
 [node name="ConveyorBelt3" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1360, 640 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt7" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1280, 640 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt4" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1440, 640 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt5" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1520, 640 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 1
 
 [node name="ConveyorBelt6" parent="RightBlueExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 1600, 640 )
 scale = Vector2( -1, 1 )
-conveyor_tile = 0
 conveyor_color = 1
 
 [node name="LeftGreenExitBelt" type="Node2D" parent="."]
@@ -207,32 +189,21 @@ conveyor_color = 1
 [node name="ConveyorBelt" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 320, 640 )
 conveyor_tile = 1
-conveyor_color = 0
 
 [node name="ConveyorBelt2" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 160, 640 )
-conveyor_tile = 0
-conveyor_color = 0
 
 [node name="ConveyorBelt4" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 80, 640 )
-conveyor_tile = 0
-conveyor_color = 0
 
 [node name="ConveyorBelt5" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 0, 640 )
-conveyor_tile = 0
-conveyor_color = 0
 
 [node name="ConveyorBelt6" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( -80, 640 )
-conveyor_tile = 0
-conveyor_color = 0
 
 [node name="ConveyorBelt3" parent="LeftGreenExitBelt" instance=ExtResource( 4 )]
 position = Vector2( 240, 640 )
-conveyor_tile = 0
-conveyor_color = 0
 
 [node name="PackageSlotSpawner3" parent="LeftGreenExitBelt" instance=ExtResource( 6 )]
 position = Vector2( 380.93, 673 )
@@ -272,6 +243,7 @@ __meta__ = {
 
 [node name="Musica_fundo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = 4.289
 bus = "Musics"
 
 [node name="Esteira" type="AudioStreamPlayer" parent="."]
@@ -292,7 +264,7 @@ margin_top = 822.527
 margin_right = 154.749
 margin_bottom = 918.527
 rect_scale = Vector2( 1.8, 2 )
-min_value = -65.0
+min_value = -50.0
 max_value = -19.0
 value = -19.0
 __meta__ = {

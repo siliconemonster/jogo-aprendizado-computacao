@@ -21,6 +21,7 @@ var volume
 func volume():
 	volume_anterior = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Musics"))
 	_on_HSlider_value_changed(volume_anterior)
+	$HSlider.value = volume_anterior
 
 func set_health(value):
 	health = value
@@ -113,6 +114,8 @@ func _on_HSlider_value_changed(value):
 	if (value > -35 and value <= -19):
 		$HSlider/botao_som.texture_normal = _texture1
 		_texturaAtual = _texture1
+		
+	$HSlider.focus_mode = false
 
 
 func _on_botao_som_pressed():
