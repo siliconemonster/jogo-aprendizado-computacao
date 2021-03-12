@@ -2,7 +2,6 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-var global = get_node("res://src/Levels/global.gd")
 var health = 3 setget set_health
 var score = 0 setget set_score
 var threshold_max_score = 0
@@ -49,7 +48,6 @@ func _ready():
 #func _process(delta):
 #	pass
 func gameOver():
-	global.score = score
 	if score > self.read_savegame():
 		self.save(score)
 	get_tree().change_scene("res://src/Scenes/Levels/GameOverScreen.tscn")
